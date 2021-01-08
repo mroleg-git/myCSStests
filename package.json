@@ -1,41 +1,40 @@
 {
-    "name": "my-npm-projekt",
-    "version": "1.0.0",
-    "description": "1st commit test кирилица",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "devserv": "webpack serve",
-      "dev": "webpack --mode development",
-      "devbabel": "babel src -d lib",
-      "devbin": "./node_modules/.bin/webpack",
-      "build": "webpack --mode production"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/mroleg-git/myRepository.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/mroleg-git/myRepository/issues"
-    },
-    "homepage": "https://github.com/mroleg-git/myRepository#readme",
-    "devDependencies": {
-      "@babel/cli": "^7.12.8",
-      "@babel/core": "^7.12.9",
-      "@babel/plugin-proposal-class-properties": "^7.12.1",
-      "@babel/preset-env": "^7.12.7",
-      "babel-loader": "^8.2.1",
-      "css-loader": "^5.0.1",
-      "html-loader": "^1.3.2",
-      "html-webpack-plugin": "^4.5.0",
-      "mini-css-extract-plugin": "^1.3.2",
-      "style-loader": "^2.0.0",
-      "webpack": "^4.44.2",
-      "webpack-cli": "^4.2.0",
-      "webpack-dev-server": "^3.11.0"
-    },
-    "dependencies": {}
-  }
-  
+  "name": "my_css_test",
+  "version": "1.0.0",
+  "description": "trying to typeset from a layout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devserv": "webpack serve",
+    "dev": "webpack --mode development",
+    "devbabel": "babel src -d lib",
+    "devbin": "webpack",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mroleg-git/myCSStests.git"
+  },
+  "author": "Oleg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mroleg-git/myCSStests/issues"
+  },
+  "homepage": "https://github.com/mroleg-git/myCSStests#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "babel-loader": "^8.2.1",
+    "css-loader": "^5.0.1",
+    "html-loader": "^1.3.2",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.3.2",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {}
+}
