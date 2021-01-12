@@ -38,7 +38,7 @@ body {
   width: 50px;
   flex: 1 1 auto;
 }
-.sidebar__elem {
+.sidebar__btn {
   width: 100%;
 }
 .sidebar__settings {
@@ -46,7 +46,7 @@ body {
   height: 50px;
 }
 
-.contentwraper {
+.mainwindow {
   display: flex;
   flex-direction: column;
 }
@@ -73,20 +73,45 @@ body {
   padding-left: 30px;
   padding-right: 30px;
 }
-.container {
+.content__wraper {
   display: flex;
   flex-direction: column;
 }
-.gly {
+.analytics {
   display: flex;
   justify-content: space-between;
 }
 
 .dashboard {
   height: 77px;
+  display: flex;
+  align-items: center;
+}
+.dashboard__text {
+  flex: 1 1 auto;
+}
+.dashboard__btnwrap {
+}
+.dashboard__btnborder {
+  display: flex;
+  margin-left: 15px;
+  border: solid 1px rgb(182, 31, 31);
+  border-radius: 5px;
+}
+.dashboard__button {
+}
+.button__manage {
+}
+.button__create {
+}
+.dasboard__btnicon {
+}
+.btnicon__manage {
+}
+.btnicon__create {
 }
 
-.leftgroup {
+.analytics__group {
   display: flex;
   flex-direction: column;
 
@@ -111,6 +136,17 @@ body {
   /* x y radius color */
   border-radius: 5px;
 }
+.data1 {
+}
+.data1__iconframe {
+}
+.data1__icon {
+}
+.data1__value {
+}
+.data1__mark {
+}
+
 .longcontainer {
   width: 415px;
   height: 189px;
@@ -123,9 +159,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.leftcolumn {
+.analytics__leftcolumn {
 }
-.rightcolumn {
+.analytics__rightcolumn {
 }
 .tallcontainer {
   width: 197px;
