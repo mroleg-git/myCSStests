@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "devserv": "webpack serve",
-    "dev": "webpack --mode development",
+    "start": "webpack serve",
     "devbabel": "babel src -d lib",
-    "devbin": "webpack",
+    "dev": "webpack --mode development",
     "build": "webpack --mode production"
   },
   "repository": {
