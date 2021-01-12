@@ -1,9 +1,208 @@
+/*свойства блока
+  align-items: stretch / center / flex-start / flex-end; ориентирует все элементЫ!- (вся область/поцентру/в начале/вконце контейнера)
+  discplay: flex; - делает блоком
+  flex-direction: row / row-reverse / column / column-reverse; вывод елемнтов в строку/встр в обр порядке/колонку/колонку в обр порядке
+  justify-content: space-between;
+*/
+/*свойства элементов
+  align-self: stretch / center / flex-start / flex-end; ориентирует элемент- (вся область/поцентру/в начале/вконце контейнера)
+  flex-grow: 1; задает возможность увеличиваться больше базового
+  flex-shrink: 1; задает возможность становиться меньше чем базовый
+  flex-basis: 20%; задает базовый размер
+  flex: 1 1 20%;
+*/
 * {
-  background-color: rgb(138, 133, 133);
+  box-sizing: border-box;
 }
-/* body {
+body {
+  width: 960px;
+  height: 540px;
+}
+.mainwraper {
+  display: flex;
+}
+.sidebar {
+  width: 50px;
+  height: 540px;
+  background: #373b53;
+
+  display: flex;
+  flex-direction: column;
+}
+.sidebar__logo {
+  background-image: url(0915eaa48378f79c002f65bf23174394.png);
+  width: 50px;
+  height: 50px;
+}
+.sidebar__buttons {
+  width: 50px;
+  flex: 1 1 auto;
+}
+.sidebar__elem {
   width: 100%;
-  height: 100%;
+}
+.sidebar__settings {
+  width: 50px;
+  height: 50px;
+}
+
+.contentwraper {
+  display: flex;
+  flex-direction: column;
+}
+.topbar {
+  width: 910px;
+  height: 50px;
+
+  display: flex;
+}
+.topbar__search {
+  width: 60%;
+}
+.topbar__account {
+  width: 20%;
+}
+.topbar__buttons {
+  width: 20%;
+}
+.content {
+  background-color: #f2f3f7;
+  width: 910px;
+  height: 490px;
+
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.gly {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard {
+  height: 77px;
+}
+
+.leftgroup {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+.leftgroup__topflex {
+  display: flex;
+
+  justify-content: space-between;
+}
+.leftgroup__bottomflex {
+  display: flex;
+
+  justify-content: space-between;
+}
+.smallcontainer {
+  width: 197px;
+  height: 77px;
+  background: #ffffff;
+
+  box-shadow: 0 2px #ededf6;
+  /* x y radius color */
+  border-radius: 5px;
+}
+.longcontainer {
+  width: 415px;
+  height: 189px;
+  background: #ffffff;
+  box-shadow: 0 2px #ededf6;
+  border-radius: 5px;
+}
+
+.rightgroup {
+  display: flex;
+  justify-content: space-between;
+}
+.leftcolumn {
+}
+.rightcolumn {
+}
+.tallcontainer {
+  width: 197px;
+  height: 286px;
+  margin-top: 20px;
+  background: #ffffff;
+  box-shadow: 0 2px #ededf6;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #dfe1eb;
+}
+
+/* .mainwraper {
+  display: flex;
+  justify-content: space-between;
+}
+.navandcontentwraper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.content {
+  width: 910px;
+  height: 490px;
+  padding-right: 30px;
+  background-color: #dfe1eb;
+}
+.navigation {
+  width: 910px;
+  height: 50px;
+  border: solid 2px rgb(255, 240, 35);
+}
+.topbar {
+  width: 50px;
+  height: 540px;
+  background: #373b53;
+  border: solid 2px rgb(35, 185, 255);
+}
+.smallcontainer {
+  width: 197px;
+  height: 75px;
+  background: #ffffff;
+  border-radius: 5px;
+  border: solid 1px rgb(247, 4, 4);
+}
+.horisontlcontainer {
+  width: 415px;
+  height: 189px;
+  background: #ffffff;
+  border-radius: 5px;
+  border: solid 1px rgb(16, 19, 218);
+}
+.bigcontainer {
+  width: 197px;
+  height: 286px;
+  background: #ffffff;
+  border-radius: 5px;
+  border: solid 1px rgb(0, 255, 64);
+}
+.topwraper {
+  display: flex;
+  justify-content: space-between;
+}
+.leftwraper {
+  display: flex;
+  justify-content: space-between;
+}
+.wraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bottomwraper {
+  display: flex;
+  justify-content: space-between;
 } */
 
 
