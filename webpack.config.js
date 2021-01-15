@@ -1,6 +1,9 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { loader } = require("mini-css-extract-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
+//
+//const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
   mode: "development",
@@ -32,9 +35,33 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
+      {
+        test: /\.scss$/,
+        use: [
+          //важно!!!
+          // fallback to style-loader in development
+          //process.env.NODE_ENV !== "production"
+          //  ? "style-loader"
+          //  :
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader",
+        ],
+      },
+      //как я понял - либо style css либо miniextractplugin
+      //
+      // works
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     "style-loader",
+      //     { loader: "css-loader", options: { importLoaders: 1 } },
+      //     "postcss-loader",
+      //   ],
+      // },
       {
         test: /\.(png|gif|jpg|svg)$/,
         use: ["file-loader"],
@@ -49,7 +76,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // all options are optional
-      filename: "styles.css",
+      filename: "[name].css",
+      //filename: devMode ? "[name].css" : "[name].[hash].css",
       //chunkFilename: '[id].css',
       //ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),

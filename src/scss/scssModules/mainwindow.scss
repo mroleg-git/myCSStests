@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+}
+.mainwraper {
+  display: flex;
+}
+
+.mainwindow {
+  display: flex;
+  flex-direction: column;
+}

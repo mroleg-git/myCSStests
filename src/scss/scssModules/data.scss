@@ -1,0 +1,42 @@
+.data {
+  display: flex;
+}
+.data__iconframe {
+  width: 35px;
+  height: 35px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.data__icon {
+}
+.data__iconframe__clor0 {
+  background: rgba(112, 59, 219, 0.377);
+  border-radius: 50%;
+}
+.data__iconframe__clor1 {
+  background: rgba(51, 214, 160, 0.486);
+  border-radius: 50%;
+}
+.data__iconframe__clor2 {
+  background: rgba(255, 76, 97, 0.438);
+  border-radius: 50%;
+}
+.data__iconframe__clor3 {
+  background: rgba(76, 183, 255, 0.466);
+  border-radius: 50%;
+}
+.data__iconframe__clor4 {
+  background: rgba(255, 183, 0, 0.459);
+  border-radius: 50%;
+}
+.data__iconframe__clor5 {
+  background: rgba(76, 183, 255, 0.527);
+  border-radius: 50%;
+}
+
+.data__value {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.data__mark {
+}

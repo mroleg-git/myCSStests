@@ -1,0 +1,27 @@
+.sidebar {
+  width: 50px;
+  height: 540px;
+
+  background: #373b53;
+
+  display: flex;
+  flex-direction: column;
+}
+.sidebar__logo {
+  background-image: url(../adds/toolLogo.png);
+
+  width: 50px;
+  height: 50px;
+}
+.sidebar__buttons {
+  width: 50px;
+
+  flex: 1 1 auto;
+}
+.sidebar__btn {
+  width: 50px;
+}
+.sidebar__settings {
+  width: 50px;
+  height: 50px;
+}

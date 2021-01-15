@@ -1,0 +1,15 @@
+.topbar {
+  width: 910px;
+  height: 50px;
+
+  display: flex;
+}
+.topbar__search {
+  width: 60%;
+}
+.topbar__account {
+  width: 20%;
+}
+.topbar__buttons {
+  width: 20%;
+}
