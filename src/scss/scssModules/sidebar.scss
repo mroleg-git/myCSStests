@@ -1,11 +1,5 @@
-// $sidebarWidth: (100% / ($maketW / 100px));
-// $sidebarHeight: 100%;
-// $sidebarBtnH: (100% / ($maketH / 100px));
-
 .sidebar {
-  @include sizes($sidebarWidth, $sidebarHeight);
-  @include min_sizes(50px, 540px);
-
+  @include sizes($sidebarWidth);
   display: flex;
   flex-direction: column;
 }
@@ -15,7 +9,7 @@
 .sidebar__logo {
   //  background-image: url(../adds/toolLogo.png);
   @include sizes(100%, $sidebarBtnH);
-  @include min_sizes(50px, 50px);
+  @include min_sizes;
 
   //затычка...
   background-color: blueviolet;
@@ -32,7 +26,7 @@
 
 .sidebar__btn {
   @include sizes(100%, $sidebarBtnH);
-  @include min_sizes(50px, 50px);
+  @include min_sizes;
 
   background: #373b53;
   border: none;

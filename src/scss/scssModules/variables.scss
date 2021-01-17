@@ -1,7 +1,7 @@
 $maketW: 1920px;
 $maketH: 1080px;
 
-$sidebarWidth: (100% / ($maketW / 100px));
+$sidebarWidth: (100% / ($maketW / 100px)); //
 $sidebarHeight: 100%;
 
 $sidebarBtnH: (100% / ($maketH / 100px));
@@ -10,3 +10,17 @@ $topbarWidth: 100%;
 $topbarHeight: (100% / ($maketH / 100px));
 
 $contentPadding: (100%/ (1920px / 60px));
+
+// min w/h
+
+$pageMinWidth: 960px; //960px
+$pageMinHight: 540px; //540px
+
+$sideBarMinWidth: 50px;
+$sideBarMinHeight: 540px;
+
+$topBarMinWidth: 910px;
+$topBarMinHeight: 50px;
+
+$contentMinWidth: 910px;
+$contentMinHeight: ($pageMinHight - 50px); //490px

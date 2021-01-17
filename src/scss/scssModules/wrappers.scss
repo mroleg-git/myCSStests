@@ -1,5 +1,3 @@
-// $maketW: 1920px;
-// $maketH: 1080px;
 * {
   box-sizing: border-box;
   padding: 0px;
@@ -7,23 +5,23 @@
 }
 
 html {
-  @include sizes(100%, 100%);
+  @include sizes;
 }
 body {
-  @include sizes(100%, 100%);
+  @include sizes;
 }
 
 .pagewraper {
   display: flex;
-  @include sizes(100%, 100%);
-
-  // border: solid 1px red;
+  @include sizes;
+  @include min_sizes($pageMinWidth, $pageMinHight);
+  // border: solid 2px red;
 }
 
 .contentwraper {
   display: flex;
   flex-direction: column;
-  @include sizes(100%, 100%);
-
-  // border: solid 1px black;
+  @include sizes;
+  @include min_sizes($contentMinWidth, $contentMinHeight);
+  // border: solid 2px black;
 }

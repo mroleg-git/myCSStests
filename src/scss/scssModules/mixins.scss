@@ -1,8 +1,8 @@
-@mixin sizes($w, $h) {
+@mixin sizes($w: 100%, $h: 100%) {
   width: $w;
   height: $h;
 }
-@mixin min_sizes($minW, $minH) {
+@mixin min_sizes($minW: 50px, $minH: 50px) {
   min-width: $minW;
   min-height: $minH;
 }
