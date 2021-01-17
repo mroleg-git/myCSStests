@@ -1,22 +1,27 @@
 * {
   box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
 
-// // body {
-// //   width: 1920px;
-// //   height: 1080px;
-// // }
+html {
+  @include sizes(100%, 100%);
+}
+body {
+  @include sizes(100%, 100%);
+}
 
-// вырезаны
-// .mainwraper {
-//   display: flex;
-//   //@include size;
-//   //@include size($bodyW, $bodyH);
-//   width: 100%;
-//   height: 100%;
-// }
+.pagewraper {
+  display: flex;
+  @include sizes(100%, 100%);
 
-// .mainwindow {
-//   display: flex;
-//   flex-direction: column;
-// }
+  // border: solid 1px red;
+}
+
+.contentwraper {
+  display: flex;
+  flex-direction: column;
+  @include sizes(100%, 100%);
+
+  // border: solid 1px black;
+}

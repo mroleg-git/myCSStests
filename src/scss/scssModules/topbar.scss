@@ -1,15 +1,19 @@
-// .topbar {
-//   width: 910px;
-//   height: 50px;
+.topbar {
+  @include sizes($topbarWidth, $topbarHeight);
+  @include min_sizes(905px, 50px);
 
-//   display: flex;
-// }
-// .topbar__search {
-//   width: 60%;
-// }
-// .topbar__account {
-//   width: 20%;
-// }
-// .topbar__buttons {
-//   width: 20%;
-// }
+  display: flex;
+}
+.topbar__decoration--c {
+  background-color: yellow;
+}
+.topbar__search {
+  width: 60%;
+}
+.topbar__account {
+  border-right: 2px solid yellowgreen;
+  width: 20%;
+}
+.topbar__buttons {
+  width: 20%;
+}

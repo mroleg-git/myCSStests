@@ -1,11 +1,4 @@
-// (1920px / 1080) = 1.777778
-
 .sidebar {
-  position: absolute;
-  z-index: 1;
-  top: 0px;
-  left: 0px;
-
   @include sizes($sidebarWidth, $sidebarHeight);
   @include min_sizes(50px, 540px);
 
