@@ -1,3 +1,6 @@
+// $topbarWidth: 100%;
+// $topbarHeight: (100% / ($maketH / 100px));
+
 .topbar {
   @include sizes($topbarWidth, $topbarHeight);
   @include min_sizes(905px, 50px);

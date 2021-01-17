@@ -1,15 +1,14 @@
-// .content {
-//   background-color: #f2f3f7;
-//   /* width: 910px; */
-//   /* height: 490px; */
+// $contentPadding: (100%/ (1920px / 60px));
 
-//   padding-left: 30px;
-//   padding-right: 30px;
-//   display: flex;
-//   flex-direction: column;
-// }
+.content {
+  flex: 1 1 auto;
 
-// footer {
-//   text-align: center;
-//   background-color: #c5c5c5;
-// }
+  padding-left: $contentPadding;
+  padding-right: $contentPadding;
+
+  display: flex;
+  flex-direction: column;
+}
+.content__decoration--c {
+  background-color: #f2f3f7;
+}
