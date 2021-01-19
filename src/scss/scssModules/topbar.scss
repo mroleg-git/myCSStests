@@ -1,9 +1,10 @@
 .topbar {
   width: 100%;
-  @include convertHeightToPercent($layoutHeight, $lTopBarH);
-  @include minSizes_px($topBarMinWidth, $topBarMinHeight);
+  height: $topbarHeight;
+  min-height: $topbarMin_H;
 
   display: flex;
+  flex-wrap: wrap;
 }
 .topbar__decoration--c {
   background-color: yellow;

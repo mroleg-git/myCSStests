@@ -1,45 +1,27 @@
-// // //сетка на float- ах
-// // .row_2 {
-// //   display: flex;
-// //   flex-wrap: wrap;
-// //   justify-content: space-between;
-// //   > div {
-// //     //@include grid(20px, 4, 5%);
-// //     border: darkred 1px solid;
-// //   }
-// // }
-
-// // сделал сетку на флексах
-// .row_1 {
-//   @include grid(20px);
-//   > div {
-//     @include cols(4, 5%);
-//     border: darkred 1px solid;
-//   }
-// }
-
 .row {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  // border: chartreuse 2px dotted;
+}
+.row__clear__margin {
+  margin: 0px;
 }
 
-.col-3__size__mod {
-  max-width: (100% / ($lTopBarW / $lDashboardWidgetW));
-  min-width: $widgetMinW;
-  min-height: $widgetMinH;
+.col-3__modified__a {
+  max-width: 21.7033%;
+  min-width: (395px * $scale);
+  min-height: (154px * $scale);
 }
-.col-3__2size__mod {
-  max-width: (200% / ($lTopBarW / ($lDashboardWidgetW + 20px)));
-  min-height: $widgetMinH;
+.col-3__modified__b {
+  margin-top: 20px;
+  max-width: (200% / (1820px / (395px + 20px))); // 20px
+  min-height: (154px * $scale);
 }
 
-.col-6__size__mod {
-  max-width: (100% / ($lTopBarW / ($lDashboardScheduleW + 40px)));
-  min-height: $sheduleMinH;
+.col-6__modified__a {
+  max-width: (100% / (1820px / (830px + 40px))); // 40px
+  min-height: (378px * $scale);
 }
 
 .col-1 {
@@ -80,3 +62,23 @@
 .col-12 {
   width: $col12;
 }
+
+// // //сетка на float- ах
+// // .row_2 {
+// //   display: flex;
+// //   flex-wrap: wrap;
+// //   justify-content: space-between;
+// //   > div {
+// //     //@include grid(20px, 4, 5%);
+// //     border: darkred 1px solid;
+// //   }
+// // }
+
+// // сделал сетку на флексах
+// .row_1 {
+//   @include grid(20px);
+//   > div {
+//     @include cols(4, 5%);
+//     border: darkred 1px solid;
+//   }
+// }

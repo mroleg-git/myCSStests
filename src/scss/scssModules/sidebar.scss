@@ -1,7 +1,8 @@
 .sidebar {
-  @include convertWidthToPercent($layoutWidth, $lSideBarW);
-  //width = 100% /(1920px / 100px)
+  width: $sidebarWidth;
   height: 100%;
+  min-width: $sidebarMin_W;
+  min-height: $sidebarMin_H;
   display: flex;
   flex-direction: column;
 }
@@ -11,8 +12,9 @@
 .sidebar__logo {
   //  background-image: url(../adds/toolLogo.png);
   width: 100%;
-  @include convertHeightToPercent($layoutHeight, $lSideBar_BtnH);
-  @include minSizes_px($sideBarBtnMin_W, $sideBarBtnMin_H);
+  height: $sidebarBtnHeight;
+  min-width: $sidebarMin_W;
+  min-height: $sidebarBtnMin_H;
 
   //затычка...
   background-color: blueviolet;
@@ -28,8 +30,9 @@
 
 .sidebar__btn {
   width: 100%;
-  @include convertHeightToPercent($layoutHeight, $lSideBar_BtnH);
-  @include minSizes_px($sideBarBtnMin_W, $sideBarBtnMin_H);
+  height: $sidebarBtnHeight;
+  min-width: $sidebarMin_W;
+  min-height: $sidebarBtnMin_H;
 
   background: #373b53;
   border: none;

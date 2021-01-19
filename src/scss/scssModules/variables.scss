@@ -1,61 +1,3 @@
-// basic layout sizes
-$layoutWidth: 1920px;
-$layoutHeight: 1080px;
-
-$lSideBarW: 100px;
-$lSideBarH: 1080px;
-$lSideBar_BtnW: 100px;
-$lSideBar_BtnH: 100px;
-
-$lTopBarW: 1820px;
-$lTopBarH: 100px;
-
-$lDashboardManageBtnW: 204px;
-$lDashboardManageBtnH: 50px;
-$lDashboardCreateBtnW: 225px;
-$lDashboardCreateBtnH: 50px;
-
-$lDashboardWidgetW: 395px;
-$lDashboardWidgetH: 154px;
-$lDashboardListW: 395px;
-$lDashboardListH: 572px;
-$lDashboardScheduleW: 830px;
-$lDashboardScheduleH: 378px;
-
-$contentPadding: (100%/ (($layoutWidth - $lSideBarW) / 60px));
-
-// min w/h
-
-$scale: 0.25;
-$pageMinWidth: ($layoutWidth * $scale);
-$pageMinHeight: ($layoutHeight * $scale);
-
-$sideBarMinWidth: ($lSideBarW * $scale);
-$sideBarMinHeight: ($lSideBarH * $scale); //540
-$sideBarBtnMin_W: ($lSideBar_BtnW * $scale);
-$sideBarBtnMin_H: ($lSideBar_BtnH * $scale);
-
-$topBarMinWidth: ($lTopBarW * $scale);
-$topBarMinHeight: ($lTopBarH * $scale);
-
-$contentMinWidth: (($layoutWidth - $lSideBarW) * $scale); //910px;
-$contentMinHeight: (($layoutHeight - $lTopBarH) * $scale); //490px
-
-$manageBtnMinW: ($lDashboardManageBtnW * $scale);
-$manageBtnMinH: ($lDashboardManageBtnH * $scale);
-$createBtnMinW: ($lDashboardCreateBtnW * $scale);
-$createBtnMinH: ($lDashboardCreateBtnH * $scale);
-
-$widgetMinW: ($lDashboardWidgetW * $scale);
-$widgetMinH: ($lDashboardWidgetH * $scale);
-$listMinW: ($lDashboardListW * $scale);
-$listMinH: ($lDashboardListH * $scale);
-$sheduleMinW: ($lDashboardScheduleW * $scale);
-$sheduleMinH: ($lDashboardScheduleH * $scale);
-
-$dashboardMinWidth: $contentMinWidth; // - $contentPadding;
-$dashboardMinHeight: $widgetMinH;
-
 // grid
 
 $col1: (100% / 12);
@@ -70,3 +12,41 @@ $col9: $col1 * 9;
 $col10: $col1 * 10;
 $col11: $col1 * 11;
 $col12: 100%;
+
+// page
+$scale: 0.5;
+$layoutWidth: 1920px;
+$layoutHeight: 1080px;
+
+// sidebar
+$sidebarWidth: (100% / ($layoutWidth / 100px)); //5.2083333%
+$sidebarBtnHeight: (100% / ($layoutHeight / 100px)); //9.25926%
+$sidebarMin_W: (100px * $scale);
+$sidebarMin_H: (600px * $scale);
+$sidebarBtnMin_H: (100px * $scale);
+// topbar
+$topbarHeight: (100% / ($layoutHeight / 100px)); //9.25926%
+$topbarMin_H: (100px * $scale);
+
+$contentPadding: (100%/ (($layoutWidth - 100px) / 60px)); //3.29670%
+
+// basic layout sizes
+// $lSideBarW: 100px;
+// $lSideBarH: 1080px;
+// $lSideBar_BtnW: 100px;
+// $lSideBar_BtnH: 100px;
+
+// $lTopBarW: 1820px;
+// $lTopBarH: 100px;
+
+// $lDashboardManageBtnW: 204px;
+// $lDashboardManageBtnH: 50px;
+// $lDashboardCreateBtnW: 225px;
+// $lDashboardCreateBtnH: 50px;
+
+// $lDashboardWidgetW: 395px;
+// $lDashboardWidgetH: 154px;
+// $lDashboardListW: 395px;
+// $lDashboardListH: 572px;
+// $lDashboardScheduleW: 830px;
+// $lDashboardScheduleH: 378px;

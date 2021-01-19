@@ -5,6 +5,8 @@
 
   display: flex;
   flex-direction: column;
+
+  overflow-y: auto;
 }
 .content__decoration--c {
   background-color: #f2f3f7;

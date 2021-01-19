@@ -2,16 +2,7 @@
   width: $w;
   height: $h;
 }
-@mixin minSizes_px($minW: 0px, $minH: 0px) {
-  min-width: $minW;
-  min-height: $minH;
-}
-@mixin convertWidthToPercent($containerWidth_px, $convertibleWidth_px) {
-  width: (100% / ($containerWidth_px / $convertibleWidth_px));
-}
-@mixin convertHeightToPercent($containerHeight_px, $convertibleWidth_px) {
-  height: (100% / ($containerHeight_px / $convertibleWidth_px));
-}
+
 //test flex grid
 @mixin grid($rowMarginTop) {
   margin-top: $rowMarginTop;
@@ -32,3 +23,14 @@
   //   margin-right: 0px;
   // }
 }
+
+// @mixin minSizes_px($minW: 0px, $minH: 0px) {
+//   min-width: $minW;
+//   min-height: $minH;
+// }
+// @mixin convertWidthToPercent($containerWidth_px, $convertibleWidth_px) {
+//   width: (100% / ($containerWidth_px / $convertibleWidth_px));
+// }
+// @mixin convertHeightToPercent($containerHeight_px, $convertibleWidth_px) {
+//   height: (100% / ($containerHeight_px / $convertibleWidth_px));
+// }

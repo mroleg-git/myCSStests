@@ -15,12 +15,12 @@ body {
 .pagewraper {
   display: flex;
   @include sizes(100%, 100%);
-  @include minSizes_px($pageMinWidth, $pageMinHeight);
+  // @include minSizes_px($pageMinWidth, $pageMinHeight);
 }
 
 .contentwraper {
   display: flex;
   flex-direction: column;
   @include sizes(100%, 100%);
-  @include minSizes_px($contentMinWidth, $contentMinHeight);
+  // @include minSizes_px($contentMinWidth, $contentMinHeight);
 }

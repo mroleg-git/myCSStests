@@ -1,9 +1,7 @@
 .dashboard {
   width: 100%;
-  //@include convertHeightToPercent($layoutHeight, 154px);
-  @include minSizes_px(($dashboardMinWidth / 2), $dashboardMinHeight);
-
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 // доделать!!!

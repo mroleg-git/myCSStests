@@ -1,17 +1,28 @@
 .widget {
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
   height: 100%;
+}
+.widget__view--decorated {
+  background: #ffffff;
+  box-shadow: 0 2px #c7c7ca;
+  border-radius: 5px;
+}
+
+.widget__toolBar {
+  display: flex;
+  align-items: flex-end;
+  // border-bottom: #bdbfc5 solid 1px;
+}
+.widget__title {
+}
+.widget__legend {
 }
 
 .widget__content {
   display: flex;
-
-  width: 100%;
-  height: 100%;
-
-  background: #ffffff;
-  box-shadow: 0 2px #ededf6;
-  border-radius: 5px;
 }
 .widget__iconframe {
   width: 35px;
@@ -21,6 +32,7 @@
 }
 .widget__icon {
 }
+
 .widget__iconframe__clor0 {
   background: rgba(112, 59, 219, 0.377);
   border-radius: 50%;
@@ -46,37 +58,33 @@
   border-radius: 50%;
 }
 .widget__value {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-top: 20px;
   margin-left: 20px;
+
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: 0.01em;
 }
 .widget__mark {
+  font-family: sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.6rem;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+
+  color: #a9abb1;
 }
 
 .schedule {
   height: (378px / 2);
   //   flex: 0 0 calc(830px / 2);
-  // margin-top: 5%;
-  // height: calc(378px / 2);
-  // border: solid 1px red;
-
-  // background: #ffffff;
-  // box-shadow: 0 2px #ededf6;
-  // border-radius: 5px;
-}
-.shedule__head {
-  display: flex;
-  align-items: flex-end;
-  border-bottom: #bdbfc5 solid 1px;
-}
-.shedule__text {
-  height: 37px;
-}
-.shedule__element1 {
-}
-.shedule__element2 {
-}
-.shedule__body {
-}
-
-.list {
 }
