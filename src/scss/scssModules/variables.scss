@@ -1,26 +1,72 @@
-$maketW: 1920px;
-$maketH: 1080px;
+// basic layout sizes
+$layoutWidth: 1920px;
+$layoutHeight: 1080px;
 
-$sidebarWidth: (100% / ($maketW / 100px)); //
-$sidebarHeight: 100%;
+$lSideBarW: 100px;
+$lSideBarH: 1080px;
+$lSideBar_BtnW: 100px;
+$lSideBar_BtnH: 100px;
 
-$sidebarBtnH: (100% / ($maketH / 100px));
+$lTopBarW: 1820px;
+$lTopBarH: 100px;
 
-$topbarWidth: 100%;
-$topbarHeight: (100% / ($maketH / 100px));
+$lDashboardManageBtnW: 204px;
+$lDashboardManageBtnH: 50px;
+$lDashboardCreateBtnW: 225px;
+$lDashboardCreateBtnH: 50px;
 
-$contentPadding: (100%/ (1920px / 60px));
+$lDashboardWidgetW: 395px;
+$lDashboardWidgetH: 154px;
+$lDashboardListW: 395px;
+$lDashboardListH: 572px;
+$lDashboardScheduleW: 830px;
+$lDashboardScheduleH: 378px;
+
+$contentPadding: (100%/ (($layoutWidth - $lSideBarW) / 60px));
 
 // min w/h
 
-$pageMinWidth: 960px; //960px
-$pageMinHight: 540px; //540px
+$scale: 0.25;
+$pageMinWidth: ($layoutWidth * $scale);
+$pageMinHeight: ($layoutHeight * $scale);
 
-$sideBarMinWidth: 50px;
-$sideBarMinHeight: 540px;
+$sideBarMinWidth: ($lSideBarW * $scale);
+$sideBarMinHeight: ($lSideBarH * $scale); //540
+$sideBarBtnMin_W: ($lSideBar_BtnW * $scale);
+$sideBarBtnMin_H: ($lSideBar_BtnH * $scale);
 
-$topBarMinWidth: 910px;
-$topBarMinHeight: 50px;
+$topBarMinWidth: ($lTopBarW * $scale);
+$topBarMinHeight: ($lTopBarH * $scale);
 
-$contentMinWidth: 910px;
-$contentMinHeight: ($pageMinHight - 50px); //490px
+$contentMinWidth: (($layoutWidth - $lSideBarW) * $scale); //910px;
+$contentMinHeight: (($layoutHeight - $lTopBarH) * $scale); //490px
+
+$manageBtnMinW: ($lDashboardManageBtnW * $scale);
+$manageBtnMinH: ($lDashboardManageBtnH * $scale);
+$createBtnMinW: ($lDashboardCreateBtnW * $scale);
+$createBtnMinH: ($lDashboardCreateBtnH * $scale);
+
+$widgetMinW: ($lDashboardWidgetW * $scale);
+$widgetMinH: ($lDashboardWidgetH * $scale);
+$listMinW: ($lDashboardListW * $scale);
+$listMinH: ($lDashboardListH * $scale);
+$sheduleMinW: ($lDashboardScheduleW * $scale);
+$sheduleMinH: ($lDashboardScheduleH * $scale);
+
+$dashboardMinWidth: $contentMinWidth; // - $contentPadding;
+$dashboardMinHeight: $widgetMinH;
+
+// grid
+
+$col1: (100% / 12);
+$col2: $col1 * 2;
+$col3: $col1 * 3;
+$col4: $col1 * 4;
+$col5: $col1 * 5;
+$col6: $col1 * 6;
+$col7: $col1 * 7;
+$col8: $col1 * 8;
+$col9: $col1 * 9;
+$col10: $col1 * 10;
+$col11: $col1 * 11;
+$col12: 100%;

@@ -1,6 +1,7 @@
 .topbar {
-  @include sizes($topbarWidth, $topbarHeight);
-  @include min_sizes($topBarMinWidth, $topBarMinHeight);
+  width: 100%;
+  @include convertHeightToPercent($layoutHeight, $lTopBarH);
+  @include minSizes_px($topBarMinWidth, $topBarMinHeight);
 
   display: flex;
 }

@@ -1,8 +1,34 @@
-@mixin sizes($w: 100%, $h: 100%) {
+@mixin sizes($w: 0%, $h: 0%) {
   width: $w;
   height: $h;
 }
-@mixin min_sizes($minW: 50px, $minH: 50px) {
+@mixin minSizes_px($minW: 0px, $minH: 0px) {
   min-width: $minW;
   min-height: $minH;
+}
+@mixin convertWidthToPercent($containerWidth_px, $convertibleWidth_px) {
+  width: (100% / ($containerWidth_px / $convertibleWidth_px));
+}
+@mixin convertHeightToPercent($containerHeight_px, $convertibleWidth_px) {
+  height: (100% / ($containerHeight_px / $convertibleWidth_px));
+}
+//test flex grid
+@mixin grid($rowMarginTop) {
+  margin-top: $rowMarginTop;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@mixin cols($cols, $colsMargin) {
+  min-width: ((100% - (($cols - 1) * $colsMargin)) / $cols);
+  background-color: dimgray;
+
+  // для более подробной настройки сетки надо доработать
+  // flex: 0 0 197px;
+  height: 77px;
+
+  // &:nth-child(#{$cols}n) {
+  //   margin-right: 0px;
+  // }
 }

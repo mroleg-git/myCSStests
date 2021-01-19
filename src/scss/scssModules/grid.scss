@@ -1,46 +1,82 @@
-// .row {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-between;
+// // //сетка на float- ах
+// // .row_2 {
+// //   display: flex;
+// //   flex-wrap: wrap;
+// //   justify-content: space-between;
+// //   > div {
+// //     //@include grid(20px, 4, 5%);
+// //     border: darkred 1px solid;
+// //   }
+// // }
+
+// // сделал сетку на флексах
+// .row_1 {
+//   @include grid(20px);
+//   > div {
+//     @include cols(4, 5%);
+//     border: darkred 1px solid;
+//   }
 // }
 
-// .col {
-//   display: flex;
-// }
+.row {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-// .col-1 {
-//   width: 8.33%;
-// }
-// .col-2 {
-//   width: 16.66%;
-// }
-// .col-3 {
-//   width: 25%;
-// }
-// .col-4 {
-//   width: 33.33%;
-// }
-// .col-5 {
-//   width: 41.66%;
-// }
-// .col-6 {
-//   width: 50%;
-// }
-// .col-7 {
-//   width: 58.33%;
-// }
-// .col-8 {
-//   width: 66.66%;
-// }
-// .col-9 {
-//   width: 75%;
-// }
-// .col-10 {
-//   width: 83.33%;
-// }
-// .col-11 {
-//   width: 91.66%;
-// }
-// .col-12 {
-//   width: 100%;
-// }
+  // border: chartreuse 2px dotted;
+}
+
+.col-3__size__mod {
+  max-width: (100% / ($lTopBarW / $lDashboardWidgetW));
+  min-width: $widgetMinW;
+  min-height: $widgetMinH;
+}
+.col-3__2size__mod {
+  max-width: (200% / ($lTopBarW / ($lDashboardWidgetW + 20px)));
+  min-height: $widgetMinH;
+}
+
+.col-6__size__mod {
+  max-width: (100% / ($lTopBarW / ($lDashboardScheduleW + 40px)));
+  min-height: $sheduleMinH;
+}
+
+.col-1 {
+  width: $col1;
+}
+.col-2 {
+  width: $col2;
+}
+.col-3 {
+  width: $col3;
+}
+.col-4 {
+  width: $col4;
+}
+.col-5 {
+  width: $col5;
+}
+.col-6 {
+  width: $col6;
+  border: darkorchid solid 1px;
+  border-radius: 5px;
+}
+.col-7 {
+  width: $col7;
+}
+.col-8 {
+  width: $col8;
+}
+.col-9 {
+  width: $col9;
+}
+.col-10 {
+  width: $col10;
+}
+.col-11 {
+  width: $col11;
+}
+.col-12 {
+  width: $col12;
+}

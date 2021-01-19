@@ -5,23 +5,22 @@
 }
 
 html {
-  @include sizes;
+  @include sizes(100%, 100%); // w + h
+  // @include sizes(1920px, 1080px); // w + h
 }
 body {
-  @include sizes;
+  @include sizes(100%, 100%);
 }
 
 .pagewraper {
   display: flex;
-  @include sizes;
-  @include min_sizes($pageMinWidth, $pageMinHight);
-  // border: solid 2px red;
+  @include sizes(100%, 100%);
+  @include minSizes_px($pageMinWidth, $pageMinHeight);
 }
 
 .contentwraper {
   display: flex;
   flex-direction: column;
-  @include sizes;
-  @include min_sizes($contentMinWidth, $contentMinHeight);
-  // border: solid 2px black;
+  @include sizes(100%, 100%);
+  @include minSizes_px($contentMinWidth, $contentMinHeight);
 }

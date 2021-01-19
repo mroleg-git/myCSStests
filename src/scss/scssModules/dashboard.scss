@@ -1,9 +1,12 @@
 .dashboard {
-  height: 77px;
+  width: 100%;
+  //@include convertHeightToPercent($layoutHeight, 154px);
+  @include minSizes_px(($dashboardMinWidth / 2), $dashboardMinHeight);
+
   display: flex;
   align-items: center;
-  border: cornflowerblue 1px solid;
 }
+// доделать!!!
 .dashboard__text {
   flex: 1 1 auto;
 }
@@ -12,7 +15,6 @@
 }
 .dashboard__btnborder {
   display: flex;
-  border: solid 1px rgb(182, 31, 31);
   border-radius: 5px;
 }
 .dashboard__button {
