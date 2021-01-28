@@ -1,5 +1,5 @@
 .row {
-  margin-top: 20px;
+  // margin-top: 20px;//------------
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -14,14 +14,20 @@
   min-height: (154px * $scale);
 }
 .col-3__modified__b {
-  margin-top: 20px;
+  // margin-top: 20px;//--------------
   max-width: (200% / (1820px / (395px + 20px))); // 20px
   min-height: (154px * $scale);
+  // @media (max-width: 493px) {
+  //   max-width: 50%;
+  // }
 }
-
 .col-6__modified__a {
-  max-width: (100% / (1820px / (830px + 40px))); // 40px
+  max-width: (100% / (1820px / (830px + 40px))); // 47%
   min-height: (378px * $scale);
+  @media (max-width: 493px) {
+    max-width: none; // 47%
+    width: 100%;
+  }
 }
 
 .col-1 {
@@ -41,8 +47,9 @@
 }
 .col-6 {
   width: $col6;
-  border: darkorchid solid 1px;
-  border-radius: 5px;
+  @media (max-width: 493px) {
+    width: 100%;
+  }
 }
 .col-7 {
   width: $col7;

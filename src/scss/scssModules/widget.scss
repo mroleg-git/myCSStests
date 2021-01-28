@@ -1,6 +1,7 @@
 .widget {
   display: flex;
   flex-direction: column;
+  // margin-top: 20px;
 
   width: 100%;
   height: 100%;
@@ -72,7 +73,7 @@
   letter-spacing: 0.01em;
 }
 .widget__mark {
-  font-family: sans-serif;
+  // font-family: sans-serif;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-style: normal;
@@ -81,7 +82,7 @@
   line-height: 16px;
   letter-spacing: 0.01em;
 
-  color: #a9abb1;
+  color: $LightGray;
 }
 
 .schedule {

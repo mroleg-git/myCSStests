@@ -1,5 +1,9 @@
-footer {
-}
-.footer__decoration--c {
-  background-color: #c5c5c5;
+.footer {
+  min-height: 25px;
+  text-align: right;
+
+  padding-left: $contentPadding;
+  padding-right: $contentPadding;
+  color: $LightGray;
+  background-color: $TranslucentBlueGray;
 }

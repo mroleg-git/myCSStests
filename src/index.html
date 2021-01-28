@@ -5,47 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Css Tests</title>
 </head>
+<!-- высоты из контента
+        названия блоков
+        инлайн стили -->
 <body>
-    <div class="pagewraper">
-        <div class="sidebar sidebar__decoration--c">
+    <div class="page-wraper">
+        <div class="sidebar">
             <div class="sidebar__logo">
                 С            
             </div>
 
             <div class="sidebar__navpanel">
-                <button class="sidebar__btn">
-                    1
-                </button>
-                <button class="sidebar__btn">
-                    2
-                </button>
-                <button class="sidebar__btn">
-                    3
-                </button>
-                <button class="sidebar__btn">
-                    4
-                </button>
+                <div class="sidebar__btn">
+                    <button class="btn">
+                        1
+                    </button>
+                </div>
+                <div class="sidebar__btn">
+                    <button class="btn">
+                        2
+                    </button>
+                </div>
+                <div class="sidebar__btn">
+                    <button class="btn">
+                        3
+                    </button>
+                </div>
+                <div class="sidebar__btn">
+                    <button class="btn">
+                        4
+                    </button>
+                </div>
             </div>
             
             <div class="sidebar__settings">
-                <button class="sidebar__btn">
-                    set
-                </button>
+                <div class="sidebar__btn">
+                    <button class="btn">
+                        set
+                    </button>
+                </div>
             </div>
         </div>
-        <div class="contentwraper">
-            <div class="topbar topbar__decoration--c">
-                <div class="topbar__search">
-                    search
+        <div class="content-wraper">
+            <div class="topbar">
+                <div class="search">
+                    <form class="search__form" action="" method="get">
+                        <input class="search__line" type="search" name="" id="" placeholder="Search">
+                    </form>
                 </div>
-                <div class="topbar__account">
-                    account
+                
+                <div class="user">
+                    <div class="user__name">
+                        Name Sname
+                        <div class="user__info">
+                            some info
+                        </div>
+                    </div>
+                    <div class="user__logo"></div>
+                    <div class="user__btn">
+                        <button class="btn">m</button>
+                    </div>
                 </div>
-                <div class="topbar__buttons">
-                    buttons
+            
+                <div class="action">
+                    <div class="action__notifications">
+                        <button class="btn">n</button>
+                    </div>
+                    <div class="action__logout">
+                        <button class="btn">l</button>
+                    </div>
                 </div>
             </div>
-            <div class="content content__decoration--c">
+           <div class="content">
                 <div class="dashboard">
                     <div class="dashboard__text">
                         <h1>Dashboard</h1>
@@ -53,37 +84,20 @@
                             Mobile Ux/Ui Design course
                         </div>
                     </div>
-                    <div class="dashboard__btnwrap">
-                        <div class="dashboard__btnborder">
-                            <div class="dasboard__btnicon btnicon__manage">icon</div>
-                            <button class="dashboard__button button__manage">Manage dashboard</button>
-                        </div>
-                    </div>
-                    <div class="dashboard__btnwrap">
-                        <div class="dashboard__btnborder">
-                            <div class="dasboard__btnicon btnicon__create">icon</div>
-                            <button class="dashboard__button button__create">Create new dashboard</button>
-                        </div>
-                    </div>
                     
+                    <button class="dashboard__btn btn__manage">
+                        <div class="btn__icon icon__manage">icon</div>
+                        Manage dashboard
+                    </button>
+
+                    <button class="dashboard__btn btn__create">
+                        <div class="btn__icon icon__create">+</div>
+                        Create new dashboard
+                    </button>
                 </div>                
                 
-                <!-- <div class="row">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="row">
-                    <div class="row">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>                    
-                    <div></div>
-                    <div></div>
-                </div> -->
-                <div class="row">
+                
+            <!--     <div class="row">
                     <div class="col-3 col-3__modified__a">
                         <div class="widget widget__view--decorated">
                             <div class="widget__toolBar">
@@ -238,17 +252,31 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-            
+                </div> -->  
             </div>
-            <div class="footer footer__decoration--c">
+            <!-- <div class="footer">
                 footer
-            </div>
-        </div>        
+            </div>          -->
+        </div>         
     </div>
 </body>
 </html>
+
+<!-- <div class="row">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="row">
+                    <div class="row">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>                    
+                    <div></div>
+                    <div></div>
+                </div> -->
 
                 <!-- <div class="row">
                     <div></div>

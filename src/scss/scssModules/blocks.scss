@@ -10,15 +10,20 @@ html {
 }
 body {
   @include sizes(100%, 100%);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-
-.pagewraper {
+.btn {
+  // min-width: ($sidebarMin_W / 2);
+  // min-height: ($sidebarBtnMin_H / 2);
+}
+.page-wraper {
   display: flex;
   @include sizes(100%, 100%);
   // @include minSizes_px($pageMinWidth, $pageMinHeight);
 }
 
-.contentwraper {
+.content-wraper {
   display: flex;
   flex-direction: column;
   @include sizes(100%, 100%);
