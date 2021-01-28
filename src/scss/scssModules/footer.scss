@@ -1,9 +1,11 @@
 .footer {
+  min-width: 310px;
   min-height: 25px;
   text-align: right;
 
   padding-left: $contentPadding;
   padding-right: $contentPadding;
-  color: $LightGray;
+
   background-color: $TranslucentBlueGray;
+  color: $LightGray;
 }

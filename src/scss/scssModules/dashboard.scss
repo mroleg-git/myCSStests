@@ -1,56 +1,51 @@
 .dashboard {
+  display: flex;
+  align-items: center;
+
   width: 100%;
-  height: 17%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-// доделать!!!
-.dashboard__text {
-  flex: 1 1 auto;
-  font-size: 0.5rem;
-}
-.dashboard__mark {
-  color: $LightGray;
-  line-height: 20px;
-}
-
-.dashboard__btn {
-  display: flex;
-  align-items: center;
-  height: 30px;
-
-  padding: 0px;
-  margin-left: 15px;
-
-  background-color: $purple;
-  border: $purple solid 1px;
-  border-radius: 4px;
-
-  font-size: 0.5rem;
-
-  & button {
-    height: 100%;
-    border: none;
-  }
-}
-.btn__manage {
-  padding: 5px;
-  color: $purple;
-
+  min-width: 310px;
+  min-height: 15%;
+  padding-left: $contentPadding;
+  padding-right: $contentPadding;
   background-color: $TranslucentBlueGray;
-}
-.btn__create {
-  padding: 5px;
-  color: $White;
-  background-color: $purple;
+
+  & .btn {
+    display: flex;
+    align-items: center;
+    height: 30px;
+
+    padding: 5px;
+    margin-left: 15px;
+
+    border: $purple solid 1px;
+    border-radius: 4px;
+
+    font-size: 0.5rem;
+    &.btn--manage {
+      color: $purple;
+      background-color: $TranslucentBlueGray;
+    }
+    &.btn--create {
+      color: $White;
+      background-color: $purple;
+    }
+  }
 }
 .btn__icon {
   width: 20px;
   height: 20px;
   text-align: center;
+  &.btn__icon--manage {
+  }
+  &.btn__icon--create {
+  }
 }
-.icon__manage {
-}
-.icon__create {
+.heading {
+  flex: 1 1 auto;
+  font-size: 0.5rem;
+
+  & .heading__mark {
+    color: $LightGray;
+    line-height: 20px;
+  }
 }
