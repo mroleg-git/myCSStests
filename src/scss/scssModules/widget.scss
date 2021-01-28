@@ -24,11 +24,12 @@
   display: flex;
   flex-direction: column;
 
-  max-width: 21.7033%;
   min-width: (395px * $scale);
   min-height: (154px * $scale);
+  max-width: 21.7033%;
   // width: 100%;
   // height: 100%;
+  margin: 0 auto;
 
   background: #ffffff;
   box-shadow: 0 2px #c7c7ca;
