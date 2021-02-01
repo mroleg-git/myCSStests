@@ -1,104 +1,138 @@
-// .col-3__modified__a {
-//   max-width: 21.7033%;
-//   min-width: (395px * $scale);
-//   min-height: (154px * $scale);
-// }
-// .col-3__modified__b {
-//   // margin-top: 20px;//--------------
-//   max-width: (200% / (1820px / (395px + 20px))); // 20px
-//   min-height: (154px * $scale);
-//   // @media (max-width: 493px) {
-//   //   max-width: 50%;
-//   // }
-// }
-// .col-6__modified__a {
-//   max-width: (100% / (1820px / (830px + 40px))); // 47%
-//   min-height: (378px * $scale);
-//   @media (max-width: 493px) {
-//     max-width: none; // 47%
-//     width: 100%;
-//   }
-// }
-
 .widget {
   display: flex;
   flex-direction: column;
 
-  min-width: (395px * $scale);
-  min-height: (154px * $scale);
-  max-width: 21.7033%;
-  // width: 100%;
-  // height: 100%;
-  margin: 0 auto;
-
-  background: #ffffff;
-  box-shadow: 0 2px #c7c7ca;
+  background: $White;
+  box-shadow: 0 2px $DarkGray;
   border-radius: 5px;
+
+  &.widget--short-form {
+    min-width: (395px * $scale);
+    max-width: 95%; // max-width: 21.7033%;
+    min-height: (154px * $scale);
+
+    margin: 0 auto;
+  }
+  &.widget--landscape-orient {
+    min-width: (395px * $scale);
+    max-width: 97.5%; // вычитаем отступ 5%
+    min-height: (378px * $scale);
+
+    margin: 0 auto;
+  }
+  &.widget--portrait-orient {
+    min-width: (395px * $scale);
+    max-width: 95%;
+    min-height: ((378px + 154px + 40px) * $scale);
+
+    margin: 0 auto;
+  }
+
+  @media (max-width: 440px) {
+    &.widget--landscape-orient {
+      max-width: 95%;
+    }
+  }
 }
+.widget__header {
+  display: flex;
+  align-items: center;
+  padding: 0px 15px 0px 15px;
+  min-height: (74px * $scale);
+  border-bottom: 1px solid $DarkGray;
+}
+.widget__title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  font-size: 0.6rem;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+.legend-item__filter {
+  display: flex;
+  align-items: center;
+  & .btn {
+    width: 15px;
+    height: 15px;
+    background: none;
+    border: $LightGray 1px solid;
+    border-radius: 2px;
+    margin-left: 5px;
+  }
+}
+.legend-item__point {
+  width: 7px;
+  height: 7px;
+  margin-left: 5px;
+  border-radius: 50%;
+  &.legend-item__point--purple-color {
+    background-color: $Purple;
+  }
+  &.legend-item__point--orange-color {
+    background-color: $Orange;
+  }
+}
+.legend-item__discroption {
+  margin-left: 5px;
+  font-weight: 500;
+  font-size: 0.6rem;
+  line-height: 20px;
+  color: $LightGray;
+}
+
 .widget__content {
   display: flex;
-}
-.widget__iconframe {
-  width: 35px;
-  height: 35px;
-  margin-top: 20px;
-  margin-left: 20px;
+  padding: 15px;
 }
 .widget__icon {
-}
+  width: 35px;
+  height: 35px;
+  margin-top: 5px;
+  margin-left: 5px;
 
-.widget__iconframe__clor0 {
-  background: rgba(112, 59, 219, 0.377);
   border-radius: 50%;
-}
-.widget__iconframe__clor1 {
-  background: rgba(51, 214, 160, 0.486);
-  border-radius: 50%;
-}
-.widget__iconframe__clor2 {
-  background: rgba(255, 76, 97, 0.438);
-  border-radius: 50%;
-}
-.widget__iconframe__clor3 {
-  background: rgba(76, 183, 255, 0.466);
-  border-radius: 50%;
-}
-.widget__iconframe__clor4 {
-  background: rgba(255, 183, 0, 0.459);
-  border-radius: 50%;
-}
-.widget__iconframe__clor5 {
-  background: rgba(76, 183, 255, 0.527);
-  border-radius: 50%;
+  &.widget__icon--clor0 {
+    background: rgba(112, 59, 219, 0.377);
+  }
+  &.widget__icon--clor1 {
+    background: rgba(51, 214, 160, 0.486);
+  }
+  &.widget__icon--clor2 {
+    background: rgba(255, 76, 97, 0.438);
+  }
+  &.widget__icon--clor3 {
+    background: rgba(76, 183, 255, 0.466);
+  }
+  &.widget__icon--clor4 {
+    background: rgba(255, 183, 0, 0.459);
+  }
+  &.widget__icon--clor5 {
+    background: rgba(76, 183, 255, 0.527);
+  }
 }
 .widget__value {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 20px;
+
+  margin-top: 5px;
   margin-left: 20px;
 
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  // font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  //   "Lucida Sans", Arial, sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 100%;
-  letter-spacing: 0.01em;
-}
-.widget__mark {
-  // font-family: sans-serif;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.6rem;
-  line-height: 16px;
-  letter-spacing: 0.01em;
 
-  color: $LightGray;
+  & .widget__clarification {
+    // font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    //   "Lucida Sans", Arial, sans-serif;
+    // font-style: normal;
+    font-weight: 500;
+    font-size: 0.6rem;
+    line-height: 16px;
+    color: $LightGray;
+  }
 }
-
-// .schedule {
-//   height: (378px / 2);
-//   //   flex: 0 0 calc(830px / 2);
-// }

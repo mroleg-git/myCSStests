@@ -1,5 +1,29 @@
 .row {
   display: flex;
+  //
+  // 3.29670% 1 pudding
+  // (100 - 3.29670*2) - длинна контента внутри строки = 93% от общей (длинны контейнера content)
+  // ((100 - 3.29670*2)/4) - четверть этой длинны = 23.35% - длинна конетйнера col-3
+  // ((100 - 3.29670*2)/4)/100*95 - длинна widget= 95% от длинны col-3 = 22.182% от общей
+  // (((100 - 3.29670*2)/4)/100*95)*4 = длинна 4 контейнеров widget без отступов = 88.73% от общей
+  // 100% - ((((100 - 3.29670*2)/4)/100*95)*4) = 11.27% - длинна всех отступов
+  // 11.27 - (3.29670*2) = 4.678% - длинна отступов между виджетами
+  // 4.678/8 = 0.58475 - один отступ
+  // 3.29670% - 0.58475 = 2.71195 - отступ в % строки от края учитывающий внутренний отступ виджета
+  // проще было в пикселях сразу сделать - да, но теперь оно работает
+  //
+  //
+  padding-left: 2.71195%; //2.339%; //$contentPadding;
+  padding-right: 2.71195%; //$contentPadding;
+  padding-top: 20px;
+
+  & .row:first-child {
+    padding: 0px;
+  }
+  & .row {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 
   .col-1 {
     width: $col1;
@@ -18,9 +42,6 @@
   }
   .col-6 {
     width: $col6;
-    // @media (max-width: 493px) {
-    //   width: 100%;
-    // }
   }
   .col-7 {
     width: $col7;
@@ -44,28 +65,13 @@
   @media (max-width: 440px) {
     flex-direction: column;
     align-items: center;
-    & .col-3 {
+    padding: 0px;
+
+    & .col-3,
+    .col-6,
+    .col-12 {
       width: 100%;
+      padding-top: 15px;
     }
   }
 }
-
-// // //сетка на float- ах
-// // .row_2 {
-// //   display: flex;
-// //   flex-wrap: wrap;
-// //   justify-content: space-between;
-// //   > div {
-// //     //@include grid(20px, 4, 5%);
-// //     border: darkred 1px solid;
-// //   }
-// // }
-
-// // сделал сетку на флексах
-// .row_1 {
-//   @include grid(20px);
-//   > div {
-//     @include cols(4, 5%);
-//     border: darkred 1px solid;
-//   }
-// }

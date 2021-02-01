@@ -17,17 +17,17 @@
     padding: 5px;
     margin-left: 15px;
 
-    border: $purple solid 1px;
+    border: $Purple solid 1px;
     border-radius: 4px;
 
     font-size: 0.5rem;
     &.btn--manage {
-      color: $purple;
+      color: $Purple;
       background-color: $TranslucentBlueGray;
     }
     &.btn--create {
       color: $White;
-      background-color: $purple;
+      background-color: $Purple;
     }
   }
 }

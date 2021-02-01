@@ -1,14 +1,10 @@
 .content {
   flex: 1 1 auto;
-
-  // display: flex;
-  // flex-direction: column;
   min-width: 310px;
-
-  // padding-left: $contentPadding;
-  // padding-right: $contentPadding;
-
   overflow-y: auto;
 
   background-color: $TranslucentBlueGray;
+
+  // padding-left: $contentPadding;
+  // padding-right: $contentPadding;
 }
