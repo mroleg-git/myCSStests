@@ -1,11 +1,18 @@
 @import "/src/scss/scssModules/variables.scss";
 @import "/src/scss/scssModules/mixins.scss";
 @import "/src/scss/scssModules/colors.scss";
-@import "/src/scss/scssModules/blocks.scss";
+
+@import "/src/scss/scssModules/mainblocks.scss";
+@import "/src/scss/scssModules/wrapers.scss";
+
 @import "/src/scss/scssModules/sidebar.scss";
+
 @import "/src/scss/scssModules/topbar.scss";
-@import "/src/scss/scssModules/content.scss";
+
 @import "/src/scss/scssModules/dashboard.scss";
+
+@import "/src/scss/scssModules/content.scss";
 @import "/src/scss/scssModules/grid.scss";
 @import "/src/scss/scssModules/widget.scss";
+
 @import "/src/scss/scssModules/footer.scss";

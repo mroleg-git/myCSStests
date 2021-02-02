@@ -3,8 +3,8 @@
   flex-direction: column;
 
   background: $White;
-  box-shadow: 0 2px $DarkGray;
   border-radius: 5px;
+  box-shadow: 0 2px $DarkGray;
 
   &.widget--short-form {
     min-width: (395px * $scale);
@@ -40,51 +40,66 @@
   padding: 0px 15px 0px 15px;
   min-height: (74px * $scale);
   border-bottom: 1px solid $DarkGray;
+  & .item__discroption {
+    margin-left: 5px;
+  }
 }
 .widget__title {
   flex: 1 1 auto;
   font-weight: 700;
   font-size: 0.6rem;
 }
-.legend-item {
+
+.widget .item {
   display: flex;
   align-items: center;
 }
-.legend-item__filter {
+
+// .widget .item__value {
+//   font-weight: 600;
+//   font-size: 1rem;
+//   line-height: 100%;
+// }
+.widget .item__discroption {
   display: flex;
   align-items: center;
-  & .btn {
-    width: 15px;
-    height: 15px;
-    background: none;
-    border: $LightGray 1px solid;
-    border-radius: 2px;
-    margin-left: 5px;
-  }
-}
-.legend-item__point {
-  width: 7px;
-  height: 7px;
-  margin-left: 5px;
-  border-radius: 50%;
-  &.legend-item__point--purple-color {
-    background-color: $Purple;
-  }
-  &.legend-item__point--orange-color {
-    background-color: $Orange;
-  }
-}
-.legend-item__discroption {
-  margin-left: 5px;
+
   font-weight: 500;
   font-size: 0.6rem;
   line-height: 20px;
   color: $LightGray;
 }
+.widget .item__filter {
+  & .btn {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    background: none;
 
+    // border: $LightGray 1px solid;
+    // border-radius: 2px;
+  }
+}
+.widget .item__point {
+  width: 7px;
+  height: 7px;
+  margin-left: 5px;
+  border-radius: 50%;
+  &.item__point--purple-color {
+    background-color: $Purple;
+  }
+  &.item__point--orange-color {
+    background-color: $Orange;
+  }
+}
 .widget__content {
   display: flex;
   padding: 15px;
+  // & .item__value,
+  // .item__discroption {
+  //   margin-left: 20px;
+  //   width: 1 1 auto;
+  // }
 }
 .widget__icon {
   width: 35px;
@@ -113,10 +128,6 @@
   }
 }
 .widget__value {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
   margin-top: 5px;
   margin-left: 20px;
 

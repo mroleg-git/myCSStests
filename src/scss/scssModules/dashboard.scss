@@ -30,22 +30,24 @@
       background-color: $Purple;
     }
   }
-}
-.btn__icon {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  &.btn__icon--manage {
+  & .btn__icon {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    &.btn__icon--manage {
+      background: url(../adds/pen.svg) no-repeat;
+    }
+    &.btn__icon--create {
+      background: url(../adds/math-plus.svg) no-repeat;
+    }
   }
-  &.btn__icon--create {
-  }
-}
-.heading {
-  flex: 1 1 auto;
-  font-size: 0.5rem;
+  & .heading {
+    flex: 1 1 auto;
+    font-size: 0.5rem;
 
-  & .heading__mark {
-    color: $LightGray;
-    line-height: 20px;
+    & .heading__mark {
+      color: $LightGray;
+      line-height: 20px;
+    }
   }
 }

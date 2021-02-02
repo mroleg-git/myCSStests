@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+html {
+  @include sizes(100%, 100%); // w + h
+  font-size: 16px;
+  @media (min-width: 1430px) {
+    font-size: 20px;
+  }
+  @media (min-width: 2500px) {
+    font-size: 40px;
+  }
+}
+body {
+  @include sizes(100%, 100%);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+// .btn {
+//   // min-width: ($sidebarMin_W / 2);
+//   // min-height: ($sidebarBtnMin_H / 2);
+// }

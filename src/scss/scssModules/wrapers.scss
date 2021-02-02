@@ -1,0 +1,9 @@
+.page-wraper {
+  display: flex;
+  @include sizes(100%, 100%);
+}
+.content-wraper {
+  display: flex;
+  flex-direction: column;
+  @include sizes(100%, 100%);
+}

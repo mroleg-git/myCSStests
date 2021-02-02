@@ -11,6 +11,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 @mixin cols($cols, $colsMargin) {
   min-width: ((100% - (($cols - 1) * $colsMargin)) / $cols);
   background-color: dimgray;
@@ -23,14 +24,3 @@
   //   margin-right: 0px;
   // }
 }
-
-// @mixin minSizes_px($minW: 0px, $minH: 0px) {
-//   min-width: $minW;
-//   min-height: $minH;
-// }
-// @mixin convertWidthToPercent($containerWidth_px, $convertibleWidth_px) {
-//   width: (100% / ($containerWidth_px / $convertibleWidth_px));
-// }
-// @mixin convertHeightToPercent($containerHeight_px, $convertibleWidth_px) {
-//   height: (100% / ($containerHeight_px / $convertibleWidth_px));
-// }
