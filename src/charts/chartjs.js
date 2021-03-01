@@ -1,10 +1,13 @@
-import "chartstyle.scss";
-import CSV from "somedata.csv";
+import "../charts/chartstyle.scss";
+import CSV from "../charts/somedata.csv";
 
-let margin = { top: 10, right: 20, left: 20, bottom: 10 };
+let margin = { top: 20, right: 20, left: 20, bottom: 20 };
 let chartContainer = ".chart-container";
-let width = 500 - margin.left - margin.right;
-let height = 450 - margin.top - margin.bottom;
+let svgWidth = document.querySelector(".chart-container").offsetWidth;
+let svgHeight = document.querySelector(".chart-container").offsetHeight;
+// console.log(svgWidth, svgHeight);
+let width = svgWidth - margin.left - margin.right;
+let height = svgHeight - margin.top - margin.bottom;
 
 let svg = d3
   .select(chartContainer)
@@ -14,65 +17,85 @@ let svg = d3
   .append("g")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-function lineChart() {
-  let x = d3
-    .scaleLinear()
-    .domain([
-      0,
-      d3.max(CSV, function (d) {
-        return d.price;
-      }),
-    ])
-    .range([0, width]);
-  let y = d3
-    .scaleLinear()
-    .domain(
-      d3.extent(CSV, function (d) {
-        return d.price;
-      })
-    )
-    .range([height, 0]);
+function pieChart() {
+  let radius = Math.min(width, height) / 2;
 
-  svg
-    .selectAll("rect")
-    .data(CSV)
+  let g = svg
+    .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+  let pie = d3.pie().value(function (d) {
+    return d.percent;
+  });
+
+  let path = d3
+    .arc()
+    .outerRadius(radius)
+    .innerRadius(radius * 0.75);
+
+  let label = d3
+    .arc()
+    .outerRadius(radius)
+    .innerRadius(radius / 0.9);
+
+  let arc = g
+    .selectAll(".arc")
+    .data(pie(CSV))
     .enter()
-    .append("rect")
-    .attr("x", function (d, i) {
-      return i * 25;
-    })
-    .attr("y", function (d) {
-      // return y(d.price);
-      return height - d.price;
-    })
-    .attr("width", function (d) {
-      return 20;
-    })
-    .attr("height", function (d) {
-      return d.price;
-    })
-    .attr("fill", function (d) {
-      return d.color;
-    });
-}
+    .append("g")
+    .attr("class", "arc");
 
+  let color = d3.scaleOrdinal(
+    CSV.map(function (key) {
+      return key.color;
+    })
+  );
+
+  arc
+    .append("path")
+    .attr("d", path)
+    .attr("fill", function (d) {
+      return color(d.data.browser);
+    })
+    .attr("stroke", "white");
+
+  // console.log(arc);
+  // текст меток
+  arc
+    .append("text")
+    .attr("transform", function (d) {
+      return "translate(" + label.centroid(d) + ")";
+    })
+    .text(function (d) {
+      return d.data.browser;
+    });
+  //заголовок
+  // svg
+  //   .append("g")
+  //   .attr("transform", "translate(" + (width / 2 - 120) + "," + 20 + ")")
+  //   .append("text")
+  //   .text("Browser use statistics - Jan 2017")
+  //   .attr("class", "title");
+}
 function barChart() {
   let x = d3
     .scaleLinear()
     .domain([
       0,
-      d3.max(CSV, function (d) {
-        return d.price;
-      }),
+      CSV.length,
+      // d3.max(CSV, function (d) {
+      //   return d.percent;
+      // }),
     ])
     .range([0, width]);
   let y = d3
     .scaleLinear()
-    .domain(
-      d3.extent(CSV, function (d) {
-        return d.price;
-      })
-    )
+    .domain([
+      0,
+      d3.max(CSV, function (d) {
+        return d.percent;
+      }),
+    ])
     .range([height, 0]);
 
   svg
@@ -81,39 +104,47 @@ function barChart() {
     .enter()
     .append("rect")
     .attr("x", function (d, i) {
-      return i * 25;
+      return i * x(1);
     })
     .attr("y", function (d) {
-      // return y(d.price);
-      return height - d.price;
+      return y(d.percent);
     })
     .attr("width", function (d) {
-      return 20;
+      return x(1);
     })
     .attr("height", function (d) {
-      return d.price;
+      // console.log(y(0) - y(d.percent));
+      return y(0) - y(d.percent);
     })
     .attr("fill", function (d) {
       return d.color;
     });
+
+  let xAxis = (g) =>
+    g.attr("transform", `translate(0,${height})`).call(d3.axisTop(x));
+
+  let yAxis = (g) =>
+    g.attr("transform", `translate(0,0)`).call(d3.axisRight(y));
+
+  svg.append("g").call(xAxis);
+
+  svg.append("g").call(yAxis);
 }
 function bubleChart() {
-  let x = d3
-    .scaleLinear()
-    .domain([
-      0,
-      d3.max(CSV, function (d) {
-        return d.price;
-      }),
-    ])
-    .range([0, width]);
+  let x = d3.scaleLinear().domain([0, CSV.length]).range([0, width]);
 
   let y = d3
     .scaleLinear()
     .domain(
-      d3.extent(CSV, function (d) {
-        return d.price;
-      })
+      [
+        0,
+        d3.max(CSV, function (d) {
+          return d.percent;
+        }),
+      ]
+      // d3.extent(CSV, function (d) {
+      //   return d.percent;
+      // })
     )
     .range([height, 0]);
 
@@ -121,32 +152,30 @@ function bubleChart() {
     .scaleLinear()
     .domain([
       0,
-      Math.sqrt(
-        d3.max(CSV, function (d) {
-          return d.price;
-        })
-      ),
+      d3.max(CSV, function (d) {
+        return d.percent;
+      }),
     ])
-    .range([0, 10]);
+    .range([0, 80]);
 
   svg
     .selectAll("circle")
     .data(CSV)
     .enter()
     .append("circle")
-    .attr("cx", function (d) {
-      return x(d.price);
+    .attr("cx", function (d, i) {
+      return x(1) * i;
     })
     .attr("cy", function (d) {
-      return y(d.price);
+      return y(d.percent);
     })
     .attr("r", function (d) {
-      return r(Math.sqrt(d.price));
+      return r(d.percent);
     })
     .attr("fill", function (d) {
       return d.color;
     });
 }
-//barChart();
+// pieChart();
+barChart();
 // bubleChart();
-lineChart();
