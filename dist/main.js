@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/css/index.css":
-/*!***************************!*\
-  !*** ./src/css/index.css ***!
-  \***************************/
+/***/ "./src/charts/chartstyle.scss":
+/*!************************************!*\
+  !*** ./src/charts/chartstyle.scss ***!
+  \************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -97,6 +97,17 @@
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
+
+/***/ }),
+
+/***/ "./src/charts/somedata.csv":
+/*!*********************************!*\
+  !*** ./src/charts/somedata.csv ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = [{"to":"Mary","from":"John","heading":"Reminder","body":"Call Cindy on Tuesday"},{"to":"Zoe","from":"Bill","heading":"Reminder","body":"Buy orange juice"},{"to":"Autumn","from":"Lindsey","heading":"Letter","body":"I miss you"}]
 
 /***/ }),
 
@@ -109,24 +120,46 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/index.css */ "./src/css/index.css");
-/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/index.scss */ "./src/scss/index.scss");
+/* harmony import */ var _charts_chartstyle_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../charts/chartstyle.scss */ "./src/charts/chartstyle.scss");
+/* harmony import */ var _charts_somedata_csv__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../charts/somedata.csv */ "./src/charts/somedata.csv");
+/* harmony import */ var _charts_somedata_csv__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_charts_somedata_csv__WEBPACK_IMPORTED_MODULE_1__);
+// import "../css/index.css";
+// import "../scss/index.scss";
 
 
-
-/***/ }),
-
-/***/ "./src/scss/index.scss":
-/*!*****************************!*\
-  !*** ./src/scss/index.scss ***!
-  \*****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+console.log(_charts_somedata_csv__WEBPACK_IMPORTED_MODULE_1___default.a); // d3.select("svg").style("background-color", "red");
+// let chartName = "chartTest1";
+// let width = 350;
+// let barHeight = 50;
+// let x; // = d3.scale.linear().range([0, 350]);
+// let chart = d3.select(chartName).attr("width", width);
+// let type = function (d) {
+//   d.price = +d.price;
+//   return d;
+// };
+// d3.csv("../charts/somedata.csv", type, function (error, data) {
+//   x.domain([
+//     0,
+//     d3.max(data, function (d) {
+//       return d.price;
+//     }),
+//   ]);
+//   chart.attr("height", barHeight * data.length);
+//   let bar = chart
+//     .selectAll("g")
+//     .data(data)
+//     .enter()
+//     .append("g")
+//     .attr("transform", function (d, i) {
+//       return "translate(0," + i * barHeight + ")";
+//     });
+//   bar
+//     .append("rect")
+//     .attr("width", function (d) {
+//       return x(d.price);
+//     })
+//     .attr("height", barHeight - 1);
+// });
 
 /***/ })
 
